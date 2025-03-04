@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Sign-Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .signup-container h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .submit-button {
+            background-color: #0095F6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-button:hover {
+            background-color: #007bb5;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Instagram Sign Up</h2>
+        
+        <!-- Form to collect user details -->
+        <form action="/submit_signup" method="POST">
+            <input type="text" name="full_name" class="input-field" placeholder="Full Name" required><br>
+            <input type="email" name="email" class="input-field" placeholder="Email" required><br>
+            <input type="text" name="username" class="input-field" placeholder="Username" required><br>
+            <input type="password" name="password" class="input-field" placeholder="Password" required><br>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Sign Up</button>
+        </form>
+
+        <div class="text-center">
+            <p>Already have an account? <a href="/login">Log in</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
